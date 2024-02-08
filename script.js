@@ -116,3 +116,31 @@ window.onload = function() {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     liveDateElement.textContent = date.toLocaleDateString('en-US', options);
 };
+
+// Array of motivational quotes
+const motivationalQuotes = [
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "Believe you can and you're halfway there. - Theodore Roosevelt",
+    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+    "It always seems impossible until it's done. - Nelson Mandela",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+];
+
+// Function to get a random motivational quote
+function getRandomQuote() {
+    const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
+    return motivationalQuotes[randomIndex];
+}
+
+// Function to render motivational quotes
+function renderMotivationalQuote() {
+    const motivationalQuotesElement = document.getElementById('motivationalQuotes');
+    motivationalQuotesElement.textContent = getRandomQuote();
+}
+
+// Initial rendering of motivational quote
+renderMotivationalQuote();
+
+// Set interval to rotate quotes every 10 seconds (10000 milliseconds)
+setInterval(renderMotivationalQuote, 10000);

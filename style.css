@@ -43,6 +43,12 @@ li:hover {
     text-decoration: line-through;
 }
 
+#motivationalQuotes{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style:italic;
+    
+}
+
 /* Media query for small devices (up to 768px) */
 @media only screen and (max-width: 768px) {
     .container {
