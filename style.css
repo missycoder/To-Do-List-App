@@ -1,4 +1,9 @@
-/* Default styles for larger devices */
+body {
+    background: #C9D6FF;
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+}
+
 .container {
     max-width: 100%;
     margin: 50px auto;
@@ -8,11 +13,12 @@
     font-family:'Montserrat', sans-serif;
 }
 
+
 .row {
     border-radius: 5px 5px 0 0;
     padding: 40px;
     background-image: linear-gradient(340deg, #045de9 0%, #f90959 100%);
-  }
+}
 
 ul {
     list-style: none;
@@ -43,25 +49,7 @@ li:hover {
     text-decoration: line-through;
 }
 
-#motivationalQuotes{
+#motivationalQuotes {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style:italic;
-    
-}
-
-
-/* Media query for small devices (up to 768px) */
-@media only screen and (max-width: 768px) {
-    .container {
-        margin: 20px auto;
-        padding: 20px;
-    }
-
-    .col-lg-3 {
-        display: none; /* Hide the left column on small devices */
-    }
-
-    .col-lg-9 {
-        width: 100%; /* Full width for the right column on small devices */
-    }
+    font-style: italic;
 }
