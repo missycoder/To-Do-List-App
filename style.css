@@ -1,14 +1,18 @@
-.off-campus {
-    display: none; /* Hide the off-campus section */
-}
-
+/* Default styles for larger devices */
 .container {
     max-width: 100%;
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family:'Montserrat', sans-serif;
 }
+
+.row {
+    border-radius: 5px 5px 0 0;
+    padding: 40px;
+    background-image: linear-gradient(340deg, #045de9 0%, #f90959 100%);
+  }
 
 ul {
     list-style: none;
@@ -37,4 +41,20 @@ li:hover {
 
 .completed {
     text-decoration: line-through;
+}
+
+/* Media query for small devices (up to 768px) */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .col-lg-3 {
+        display: none; /* Hide the left column on small devices */
+    }
+
+    .col-lg-9 {
+        width: 100%; /* Full width for the right column on small devices */
+    }
 }
