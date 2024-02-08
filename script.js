@@ -144,3 +144,25 @@ renderMotivationalQuote();
 
 // Set interval to rotate quotes every 10 seconds (10000 milliseconds)
 setInterval(renderMotivationalQuote, 10000);
+
+// Digital Clock
+document.addEventListener("DOMContentLoaded", function() {
+    setInterval(function() {
+        let hours = new Date().getHours();
+        document.querySelectorAll(".hours").forEach(function(elem) {
+            elem.textContent = (hours < 10 ? "0" : "") + hours;
+        });
+    }, 1000);
+    setInterval(function() {
+        let minutes = new Date().getMinutes();
+        document.querySelectorAll(".min").forEach(function(elem) {
+            elem.textContent = (minutes < 10 ? "0" : "") + minutes;
+        });
+    }, 1000);
+    setInterval(function() {
+        let seconds = new Date().getSeconds();
+        document.querySelectorAll(".sec").forEach(function(elem) {
+            elem.textContent = (seconds < 10 ? "0" : "") + seconds;
+        });
+    }, 1000);
+});
