@@ -1,0 +1,40 @@
+.off-campus {
+    display: none; /* Hide the off-campus section */
+}
+
+.container {
+    max-width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add hover effect */
+li:hover {
+    background-color: #f8f9fa;
+}
+
+/* Add animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.completed {
+    text-decoration: line-through;
+}
