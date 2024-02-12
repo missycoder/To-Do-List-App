@@ -117,7 +117,32 @@ window.onload = function() {
     liveDateElement.textContent = date.toLocaleDateString('en-US', options);
 };
 
-// Array of motivational quotes
+// GET quotes.JSON
+// document.addEventListener("DOMContentLoaded", function() {
+//     axios.get('quotes.json')
+//         .then(response => {
+//             const motivationalQuotes = response.quotes.motivationalQuotes;
+//             const motivationalQuotesElement = document.getElementById('motivationalQuotes');
+//             renderMotivationalQuote(motivationalQuotesElement, motivationalQuotes);
+//             setInterval(() => renderMotivationalQuote(motivationalQuotesElement, motivationalQuotes), 10000);
+//         })
+//         .catch(error => {
+//             console.error('Error fetching motivational quotes:', error);
+//         });
+// });
+
+function renderMotivationalQuote(element, quotes) {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[randomIndex];
+    element.innerHTML = `<p>"${quote.quote}"<br>- ${quote.author}</p>`;
+}
+
+
+
+
+
+// CHOOSE THIS TO REVERSE
+// Array of motivational quotes (moved to quotes.json)
 const motivationalQuotes = [
     "The only way to do great work is to love what you do. - Steve Jobs",
     "Believe you can and you're halfway there. - Theodore Roosevelt",
@@ -127,23 +152,30 @@ const motivationalQuotes = [
     "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
 ];
 
+
+
+
+
+// CHOOSE THIS TO REVERSE
 // Function to get a random motivational quote
 function getRandomQuote() {
     const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
     return motivationalQuotes[randomIndex];
 }
 
-// Function to render motivational quotes
+// // Function to render motivational quotes
 function renderMotivationalQuote() {
     const motivationalQuotesElement = document.getElementById('motivationalQuotes');
     motivationalQuotesElement.textContent = getRandomQuote();
 }
 
-// Initial rendering of motivational quote
+// // Initial rendering of motivational quote
 renderMotivationalQuote();
 
-// Set interval to rotate quotes every 10 seconds (10000 milliseconds)
+// // Set interval to rotate quotes every 10 seconds (10000 milliseconds)
 setInterval(renderMotivationalQuote, 10000);
+
+
 
 // Digital Clock
 document.addEventListener("DOMContentLoaded", function() {
