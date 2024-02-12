@@ -1,8 +1,21 @@
+/* Header Animation */
 .header h1 {
     font-family: 'Croissant One', sans-serif;
+    font-size: 3rem;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff, 0 0 80px #ffffff;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff, 0 0 90px #ff00ff;
+    }
 }
 
 
+/* SG Live Date and Day */
 #liveDate{
     font-family:'Croissant One', sans-serif;
 }
@@ -65,3 +78,19 @@ li:hover {
     font-style: italic;
 }
 
+/* Sub-Header Animation Text */
+.rainbow-text {
+    font-family: 'Croissant One', sans-serif;
+    font-size: 24px;
+    animation: rainbowAnimation 15s linear infinite;
+}
+
+@keyframes rainbowAnimation {
+    0% { color: red; }
+    16.67% { color: black; }
+    33.33% { color: yellow; }
+    50% { color: green; }
+    66.67% { color: orange; }
+    83.33% { color: indigo; }
+    100% { color: violet; }
+}

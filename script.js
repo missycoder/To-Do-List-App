@@ -117,6 +117,9 @@ window.onload = function() {
     liveDateElement.textContent = date.toLocaleDateString('en-US', options);
 };
 
+
+
+
 // GET quotes.JSON
 // document.addEventListener("DOMContentLoaded", function() {
 //     axios.get('quotes.json')
@@ -131,17 +134,14 @@ window.onload = function() {
 //         });
 // });
 
+
+// CHOOSE THIS TO REVERSE
 function renderMotivationalQuote(element, quotes) {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const quote = quotes[randomIndex];
     element.innerHTML = `<p>"${quote.quote}"<br>- ${quote.author}</p>`;
 }
 
-
-
-
-
-// CHOOSE THIS TO REVERSE
 // Array of motivational quotes (moved to quotes.json)
 const motivationalQuotes = [
     "The only way to do great work is to love what you do. - Steve Jobs",
@@ -151,10 +151,6 @@ const motivationalQuotes = [
     "It always seems impossible until it's done. - Nelson Mandela",
     "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
 ];
-
-
-
-
 
 // CHOOSE THIS TO REVERSE
 // Function to get a random motivational quote
@@ -174,6 +170,8 @@ renderMotivationalQuote();
 
 // // Set interval to rotate quotes every 10 seconds (10000 milliseconds)
 setInterval(renderMotivationalQuote, 10000);
+
+
 
 
 
@@ -198,3 +196,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, 1000);
 });
+
