@@ -153,9 +153,6 @@ const motivationalQuotes = [
 ];
 
 
-
-
-
 // CHOOSE THIS TO REVERSE
 // Function to get a random motivational quote
 function getRandomQuote() {
