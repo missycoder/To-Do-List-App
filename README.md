@@ -2,7 +2,7 @@
 
 Welcome to Slacker ToDoList! This is a simple web application built with HTML, CSS, and JavaScript that allows users to manage their daily tasks effectively.
 
-![Image Description](image_https://github.com/missycoder/SA2_ToDoList_v2/blob/jsonbin/SlackerList_Display.png?raw=true)
+![SlackerList](https://github.com/missycoder/SA2_ToDoList_v2/blob/jsonbin/SlackerList_Display.png?raw=true)
 
 ## Features
 
