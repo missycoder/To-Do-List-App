@@ -1,4 +1,27 @@
-// Global variable
+// Function to fetch and render motivational quotes
+async function renderMotivationalQuote() {
+    try {
+        const response = await axios.get(`${BASE_JSON_BIN_URL}/${BIN_ID}/latest`, {
+            headers: {
+                "X-Master-Key": MASTER_KEY
+            }
+        });
+
+        if (response.status === 200) {
+            const quotes = response.data.record.motivationalQuotes;
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
+            const motivationalQuotesElement = document.getElementById('motivationalQuotes');
+            motivationalQuotesElement.innerHTML = `<p>"${quote.quote}"<br>- ${quote.author}</p>`;
+        } else {
+            console.error('Error fetching data:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error.message);
+    }
+}
+
+// Global variable for todo list
 let todoList = [];
 
 // Function to render todo list
@@ -115,65 +138,13 @@ window.onload = function() {
     const date = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     liveDateElement.textContent = date.toLocaleDateString('en-US', options);
+
+    // Render motivational quote
+    renderMotivationalQuote();
+
+    // Set interval to update motivational quote every 10 seconds
+    setInterval(renderMotivationalQuote, 10000);
 };
-
-
-
-
-// GET quotes.JSON
-// document.addEventListener("DOMContentLoaded", function() {
-//     axios.get('quotes.json')
-//         .then(response => {
-//             const motivationalQuotes = response.quotes.motivationalQuotes;
-//             const motivationalQuotesElement = document.getElementById('motivationalQuotes');
-//             renderMotivationalQuote(motivationalQuotesElement, motivationalQuotes);
-//             setInterval(() => renderMotivationalQuote(motivationalQuotesElement, motivationalQuotes), 10000);
-//         })
-//         .catch(error => {
-//             console.error('Error fetching motivational quotes:', error);
-//         });
-// });
-
-
-// CHOOSE THIS TO REVERSE
-function renderMotivationalQuote(element, quotes) {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    const quote = quotes[randomIndex];
-    element.innerHTML = `<p>"${quote.quote}"<br>- ${quote.author}</p>`;
-}
-
-// Array of motivational quotes (moved to quotes.json)
-const motivationalQuotes = [
-    "The only way to do great work is to love what you do. - Steve Jobs",
-    "Believe you can and you're halfway there. - Theodore Roosevelt",
-    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
-    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
-    "It always seems impossible until it's done. - Nelson Mandela",
-    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
-];
-
-// CHOOSE THIS TO REVERSE
-// Function to get a random motivational quote
-function getRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
-    return motivationalQuotes[randomIndex];
-}
-
-// // Function to render motivational quotes
-function renderMotivationalQuote() {
-    const motivationalQuotesElement = document.getElementById('motivationalQuotes');
-    motivationalQuotesElement.textContent = getRandomQuote();
-}
-
-// // Initial rendering of motivational quote
-renderMotivationalQuote();
-
-// // Set interval to rotate quotes every 10 seconds (10000 milliseconds)
-setInterval(renderMotivationalQuote, 10000);
-
-
-
-
 
 // Digital Clock
 document.addEventListener("DOMContentLoaded", function() {
@@ -196,4 +167,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, 1000);
 });
-
