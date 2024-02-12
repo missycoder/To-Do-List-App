@@ -17,8 +17,8 @@ function renderTodoList() {
 
         listItem.innerHTML += `
             <div>
-                <button class="deleteBtn btn btn-danger" data-id="${index}">Delete</button>
-                <button class="editBtn btn btn-warning" data-id="${index}">Edit</button>
+            <button class="editBtn btn btn-warning" data-id="${index}">Edit</button>    
+            <button class="deleteBtn btn btn-danger" data-id="${index}">Delete</button>
             </div>
         `;
 

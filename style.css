@@ -1,3 +1,13 @@
+.header h1 {
+    font-family: 'Croissant One', sans-serif;
+}
+
+
+#liveDate{
+    font-family:'Croissant One', sans-serif;
+}
+
+
 body {
     background: #C9D6FF;
     background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
@@ -10,7 +20,8 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family:'Montserrat', sans-serif;
+    /* font-family:'Montserrat', sans-serif; */
+    font-family:'Croissant One', sans-serif;
 }
 
 
@@ -50,6 +61,7 @@ li:hover {
 }
 
 #motivationalQuotes {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Croissant One', sans-serif;
     font-style: italic;
 }
+
