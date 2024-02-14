@@ -1,6 +1,6 @@
 ## Live Demo (Gitpod Workspace)
 
-[Open in Gitpod][[https://5500-missycoder-sa2todolistv-7o10lt9tz25.ws-us108.gitpod.io/]
+[`Open in Gitpod`](https://5500-missycoder-sa2todolistv-7o10lt9tz25.ws-us108.gitpod.io/)
 
 # Slacker ToDoList
 
